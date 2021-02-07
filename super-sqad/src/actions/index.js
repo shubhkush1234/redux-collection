@@ -5,5 +5,6 @@ export function addCharacterById(id){
         type: ADD_CHARACTER,
         id
     }
+    return action;
 }
 

@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
+import CharacterList from './components/CharacterList';
 class App extends React.Component {
 
   constructor() {
@@ -15,6 +14,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h2>super squad</h2>
+        <CharacterList/>
         
       </div>
     );
