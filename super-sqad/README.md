@@ -35,3 +35,8 @@ switch(action.type){
 subscribe is an event listener which fires whenever the store gets updated.
 
 whatever is present in the "store", it will be available as "state" to the component.
+
+mapStateToProps::
+
+Its a function that takes redux state and map it to props object within our component.
+That way what ever we have returned from the redux state will then become accessible to the component via props.

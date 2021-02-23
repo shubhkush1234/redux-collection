@@ -11,7 +11,11 @@ class CharacterList extends Component {
 }
 
 function mapStateToProps(state){
-    console.log("state: ", state);
-    return{};
+    console.log("state in mapStateToProps: ", state );
+        //this state is equivalent to our current store
+
+    // debugger;
+    return{characters: state.characters};
+    
 };
 export default connect(mapStateToProps, null)(CharacterList);
