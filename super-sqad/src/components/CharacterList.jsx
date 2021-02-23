@@ -6,7 +6,17 @@ class CharacterList extends Component {
     render(){
         console.log("props in char list: ", this.props);
         return(
-            <div>Character</div>
+            <div>
+            <h4>Character</h4>
+            <ul>
+                {this.props.characters.map(characters => {
+                    return(
+                        <li key={characters.id}>{characters.name}</li>
+                    )
+                })}    
+            </ul>    
+            </div>
+
         )
     }
 }
