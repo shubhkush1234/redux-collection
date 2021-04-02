@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Form, FormGroup, FormControl, Button, ControlLabel } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import {setRecipes} from '../actions/index.js';
 
 
 class searchRecipes extends Component {
@@ -26,7 +28,8 @@ class searchRecipes extends Component {
       //   'Access-Control-Allow-Origin': '*'
       // }
     }).then(response => response.json())
-      .then(json => console.log('recipes', json))
+      // .then(json => console.log('recipes', json))
+          .then(json => this.props.recipes(json.result) );
 
   }
   render() {
@@ -58,4 +61,4 @@ class searchRecipes extends Component {
   }
 }
 
-export default searchRecipes;
+export default connect(null, {setRecipes})(searchRecipes);
