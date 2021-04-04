@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import { Form, FormGroup, FormControl, Button, ControlLabel } from 'react-bootstrap';
 import { connect } from 'react-redux';
+import RecipeItem from './RecipeItem';
 
 class RecipeList extends Component {
 
@@ -13,11 +14,9 @@ class RecipeList extends Component {
                 I'm recipeList
                 <div>
                     {
-                        this.props.recipes.map((recipes, index) => {
+                        this.props.recipes.map((recipe, index) => {
                             return (
-                                <div key={index}>
-                                    <h5>{recipes.title}</h5>
-                                </div>
+                                <RecipeItem key={index} recipe={recipe}/>
                             )
                         })
                     }
