@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form, FormGroup, FormControl, Button, ControlLabel } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import {setRecipes} from '../actions/index.js';
+import { setRecipes } from '../actions/index.js';
 
 
 class searchRecipes extends Component {
@@ -22,14 +22,11 @@ class searchRecipes extends Component {
     console.log("state", this.state, "url", url);
 
     fetch(url, {
-      method: 'GET',
-      // mode: 'cors',
-      // headers: {
-      //   'Access-Control-Allow-Origin': '*'
-      // }
-    }).then(response => response.json())
-      // .then(json => console.log('recipes', json))
-          .then(json => this.props.recipes(json.result) );
+      method: 'GET'
+    })
+      .then(response => response.json())
+        .then(json => {this.props.setRecipes(json.results)});
+
 
   }
   render() {
@@ -61,4 +58,4 @@ class searchRecipes extends Component {
   }
 }
 
-export default connect(null, {setRecipes})(searchRecipes);
+export default connect(null, { setRecipes })(searchRecipes);
