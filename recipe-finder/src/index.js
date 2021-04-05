@@ -11,6 +11,7 @@ import { Provider } from 'react-redux';
 
 const store = createStore(rootReducer);
 store.subscribe(() => console.log('store', store.getState()));
+// this will allow us to see the current state of the store anytime whenever action creator is created and we get new data.
 
 ReactDOM.render(
 
