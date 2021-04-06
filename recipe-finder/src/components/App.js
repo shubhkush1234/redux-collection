@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SearchRecipes from './SearchRecipes';
 import styles from '../styles/index.css';
 import RecipeList from './RecipeList';
+import FavouriteRecipesList from './FavouriteRecipeList';
 
 class App extends Component {
     render() {
@@ -9,6 +10,7 @@ class App extends Component {
             <div>
             <SearchRecipes/>
             <RecipeList/>
+            <FavouriteRecipesList/>
             </div>
         )
     }
