@@ -27,7 +27,7 @@ class RecipeItem extends Component {
             <div className="recipe-item">
                 {
 
-                    this.state.favorited ? <div></div> :
+                    this.state.favorited ? <div className="star">&#9733;</div> :
                     <div className="star" onClick={() =>this.favourite(recipe)}>&#9734;</div>
 
 
